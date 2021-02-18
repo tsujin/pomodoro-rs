@@ -9,7 +9,6 @@ fn main() {
     loop {        
         match keyhandler::handle_input(&receiver) {
             keyhandler::KeyType::Quit => {
-                terminal::disable_raw_mode();
                 break;
             }
             
@@ -21,6 +20,8 @@ fn main() {
                 ()
             }
         }
-        
     }
+
+    terminal::disable_raw_mode();
+
 }
