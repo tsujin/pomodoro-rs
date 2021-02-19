@@ -6,8 +6,8 @@ enum State {
 }
 
 struct PomodoroState {
-    mut prev_state: State,
-    mut curr_state: State,
+    prev_state: State,
+    curr_state: State,
 }
 
 impl PomodoroState {
@@ -18,7 +18,7 @@ impl PomodoroState {
         }
     }
 
-    fn set_state(&self, state: State) {
+    fn set_state(&mut self, state: State) {
         self.prev_state = curr_state;
         self.curr_state = state;
     }
