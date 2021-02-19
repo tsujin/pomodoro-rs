@@ -6,7 +6,7 @@ fn main() {
 
     terminal::enable_raw_mode();
     let receiver = keyhandler::run();
-    loop {        
+    loop { 
         match keyhandler::handle_input(&receiver) {
             keyhandler::KeyType::Quit => {
                 break;
