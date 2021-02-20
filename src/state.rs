@@ -13,8 +13,8 @@ struct PomodoroState {
 impl PomodoroState {
     fn init() -> PomodoroState {
         PomodoroState {
-            prev_state = None,
-            curr_state = Menu,
+            prev_state: None,
+            curr_state: Menu,
         }
     }
 
